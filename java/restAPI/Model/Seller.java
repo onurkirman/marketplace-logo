@@ -1,16 +1,21 @@
 package restAPI.Model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.ArrayList;
 
+@SuppressWarnings("ALL")
 public class Seller {
 
-    private final String          sellerName;
+    private final String    sellerName;
     private String          id;         // can be assigned using counter or might be given
     private ArrayList<Lot>  LOTlist;    //
 
-    public Seller (String sellerName){
+    @JsonCreator
+    public Seller (@JsonProperty("sellerName") String sellerName){
         this.sellerName = sellerName;
-        this.LOTlist = new ArrayList<>(); // should not be here!!
+        this.LOTlist = new ArrayList<>();
     }
 
     public ArrayList<Lot> getLOTlist(){ return LOTlist; }
