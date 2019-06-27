@@ -27,34 +27,16 @@ class LotController {
         list.removeIf(i -> i.get_lotID().equals(lotID));
         s.setLOTlist(list);
     }
-/*
-    String showLOTS(Seller s){
-        String str = "";
+
+    @SuppressWarnings("SpellCheckingInspection")
+    void changeDATE(Seller s, String lotID, String newDate){
         ArrayList<Lot> list = s.getLOTlist();
-        if(list.size() == 0){ return null; } // stop if there is no LOT assigned
-        str += "****LOTS****\n";
-        for(Lot l:list){
-            str += l.toString() + "\n";
-        }
-        return str;
-    }
-*/
-@SuppressWarnings("SpellCheckingInspection")
-void changeDATE(Seller s, String lotID, String newDate){
-        ArrayList<Lot> list = s.getLOTlist();
-        for(Lot l : list){
-            if(l.get_lotID().equals(lotID)){
-                l.setHarvestDate(newDate);
-            }
-        }
+        list.stream().filter(l -> l.get_lotID().equals(lotID)).forEach(l -> l.setHarvestDate(newDate));
         s.setLOTlist(list);
     }
 
     Lot getLOT(Seller s, String lotID){
         ArrayList<Lot> list = s.getLOTlist();
-        for (Lot i : list) {
-            if (i.get_lotID().equals(lotID)) return i;
-        }
-        return null;
+        return list.stream().filter(i -> i.get_lotID().equals(lotID)).findFirst().orElse(null);
     }
 }

@@ -1,14 +1,21 @@
 package restAPI.Controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import restAPI.Util.CustomErrorType;
 import restAPI.Model.*;
 
 import java.util.ArrayList;
 
-@SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
+@SuppressWarnings("ALL")
 @RestController
 public class ApiController {
+
+    private static final Logger logger = LoggerFactory.getLogger(ApiController.class);
 
     @Autowired
     private Marketplace         MP;
@@ -19,6 +26,7 @@ public class ApiController {
 
     @RequestMapping("/init")
     public void init(){
+        logger.info("Initializing market");
         Seller seller = new Seller("Onur");
         MP.addSeller(seller);
         Lot lot = new Lot("Muz","Turkey","12 May 2019","1800");
@@ -32,93 +40,176 @@ public class ApiController {
 
     // GET ALL LISTS
     @RequestMapping("/sellers")
-    public ArrayList<Seller> showSellers(){
-        return MP.getSellerList();
+    private ResponseEntity<?> showSellers(){
+        return showAllGeneric("sellers");
     }
 
     @RequestMapping("/buyers")
-    public ArrayList<Buyer> showBuyers(){
-        return MP.getBuyerList();
+    private ResponseEntity<?> showBuyers(){
+        return showAllGeneric("buyers");
     }
 
     @RequestMapping("/auctions")
-    public ArrayList<Auction> showAuctions(){
-        return MP.getAuctionList();
+    private ResponseEntity<?> showAuctions(){
+        return showAllGeneric("auctions");
+    }
+
+    private ResponseEntity<?> showAllGeneric(String str){
+        logger.info("Fetching {} data", str);
+        ArrayList<?> list = new ArrayList<>();
+        switch (str){
+            case "sellers":
+                list = MP.getSellerList();
+                break;
+            case "buyers":
+                list = MP.getBuyerList();
+                break;
+            case "auctions":
+                list = MP.getAuctionList();
+                break;
+        }
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
 
     // GET SPECIFIC OBJ
     @RequestMapping("/seller/{id}")
-    public Seller getSeller(@PathVariable String id){
-        return MP.getSeller(id);
+    private ResponseEntity<?> getSeller(@PathVariable String id){
+        return getGeneric("Seller",id);
     }
 
     @RequestMapping("/buyer/{id}")
-    public Buyer getBuyer(@PathVariable String id){
-        return MP.getBuyer(id);
+    private ResponseEntity<?> getBuyer(@PathVariable String id){
+        return getGeneric("Buyer", id);
     }
 
     @RequestMapping("/auction/{id}")
-    public Auction getAuction(@PathVariable String id){
-        return MP.getAuction(id);
+    private ResponseEntity<?> getAuction(@PathVariable String id){
+        return getGeneric("Auction", id);
     }
 
-    @RequestMapping("/bids/{id}")
-    public ArrayList<Bid> showBids(@PathVariable String id){ return AC.getBids(MP.getAuction(id)); }
+    private <T> ResponseEntity<?> getGeneric(String str, String id){
+        logger.info("Fetching {} with id {}", str, id);
+        T element;
+        switch (str){
+            case "Seller":
+                element = (T) MP.getSeller(id);
+                break;
+            case "Buyer":
+                element = (T) MP.getBuyer(id);
+                break;
+            case "Auction":
+                element = (T) MP.getAuction(id);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + str);
+        }
+        if (isNull(element)) {
+            logger.error("{} with id: {} not found", str, id);
+            return new ResponseEntity<>(new CustomErrorType("No such thing exists"), HttpStatus.NOT_FOUND );
+        }
+        return new ResponseEntity<>(element, HttpStatus.OK);
+    }
 
+    private <T> boolean isNull(T element){
+        return element == null;
+    }
+
+    @RequestMapping("/showBids/{id}")
+    private ResponseEntity<?> showBids(@PathVariable String id){
+        logger.info("Fetching bids with auction id {}", id);
+        Auction auction = MP.getAuction(id);
+        if(auction == null){
+            logger.error("There is no such auction with id {}", id);
+            return new ResponseEntity<>(new CustomErrorType("No such auction exists"), HttpStatus.NOT_FOUND);
+        }
+        ArrayList<Bid> list = AC.getBids(auction);
+        if(list.size() == 0){
+            logger.error("There is no bid to fetch");
+            return new ResponseEntity<>(new CustomErrorType("There is no such bid to show"),
+                    HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(list, HttpStatus.OK);
+    }
 
 
     // ADD OBJ
     @RequestMapping(method = RequestMethod.POST, value = "/seller")
-    public Seller addSeller(@RequestBody Seller seller){
+    private ResponseEntity<?> addSeller(@RequestBody Seller seller){
+        logger.info("Trying to add a seller");
         MP.addSeller(seller);
-        return MP.getSeller(seller.getID());
+        logger.info("Successfully added the seller with id {}", seller.getID());
+        return new ResponseEntity<>(MP.getSeller(seller.getID()), HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/buyer")
-    public Buyer addBuyer(@RequestBody Buyer buyer){
+    private ResponseEntity<?> addBuyer(@RequestBody Buyer buyer){
+        logger.info("Trying to add a buyer");
         MP.addBuyer(buyer);
-        return MP.getBuyer(buyer.getID());
+        logger.info("Successfully added the buyer with id {}", buyer.getID());
+        return new ResponseEntity<>(MP.getBuyer(buyer.getID()), HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/auction/{sellerID}/{lotID}")
-    public Auction addAuction(@RequestBody Auction auction, @PathVariable String sellerID, @PathVariable String lotID){
+    private ResponseEntity<?> addAuction(@RequestBody Auction auction, @PathVariable String sellerID, @PathVariable String lotID){
+        logger.info("Trying to add an auction");
         Seller seller = MP.getSeller(sellerID);
+        if(seller == null){ return  new ResponseEntity<>(
+                                    new CustomErrorType("No such seller exists"), HttpStatus.NOT_FOUND); }
         auction.setSeller(seller);
         auction.setLot(LC.getLOT(seller, lotID));
         MP.addAuction(auction);
-        return MP.getAuction(auction.getId());
+        logger.info("Successfully added the auction with id {}", auction.getID());
+        return new ResponseEntity<>(MP.getAuction(auction.getID()), HttpStatus.OK);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/addLOT/{id}")
-    public Seller addLot(@RequestBody Lot lot, @PathVariable String id){
-        LC.addLOT(MP.getSeller(id), lot);
-        return MP.getSeller(id);
+    @RequestMapping(method = RequestMethod.POST, value = "/addLot/{id}")
+    private ResponseEntity<?> addLot(@RequestBody Lot lot, @PathVariable String id){
+        logger.info("Trying to add a lot");
+        Seller seller = MP.getSeller(id);
+        if(seller == null){return  new ResponseEntity<>(
+                new CustomErrorType("No such seller exists"), HttpStatus.NOT_FOUND); }
+        if(Double.valueOf(lot.getWeight()) < 1000){
+            return new ResponseEntity<>(new CustomErrorType("The weight entered is not enough!!"),
+                HttpStatus.FORBIDDEN);}
+        LC.addLOT(seller, lot);
+        logger.info("Successfully added the lot");
+        return new ResponseEntity<>(MP.getSeller(id), HttpStatus.OK);
     }
-//
+
     @RequestMapping(method = RequestMethod.POST, value = "/addBid/{buyerID}/{auctionID}")
-    public ArrayList<Bid> addBid(@RequestBody Bid bid, @PathVariable String auctionID, @PathVariable String buyerID){
+    private ResponseEntity<?> addBid(@RequestBody Bid bid, @PathVariable String auctionID, @PathVariable String buyerID){
+        logger.info("Trying to add a bid");
         Auction auction = MP.getAuction(auctionID);
-        bid.setBuyer(MP.getBuyer(buyerID));
+        if(auction == null){return  new ResponseEntity<>(
+                new CustomErrorType("No such seller exists"), HttpStatus.NOT_FOUND); }
+        Buyer buyer = MP.getBuyer(buyerID);
+        if(buyer == null){return  new ResponseEntity<>(
+                new CustomErrorType("No such seller exists"), HttpStatus.NOT_FOUND); }
+        bid.setBuyer(buyer);
         bid.setLot(auction.getLot());
         AC.addBid(auction, bid);
-        return AC.getBids(auction);
+        ArrayList<Bid> list = AC.getBids(auction);
+        logger.info("Successfully added the bid with id {} to auction: {}", bid.getID(), auction.getID());
+        return new ResponseEntity<>(list, HttpStatus.OK);
     }
+
 
     // UPDATE OBJ
     @RequestMapping(method = RequestMethod.PUT, value = "/updateDate/{sellerID}/{lotID}/{newDate}")
-    public void updateDate(@PathVariable String sellerID, @PathVariable String lotID, @PathVariable String newDate){
+    private ResponseEntity<?> updateDate(@PathVariable String sellerID, @PathVariable String lotID, @PathVariable String newDate){
+        logger.info("Updating date of Lot {} to {}",lotID,newDate);
         Seller seller = MP.getSeller(sellerID);
+        if(seller == null){return  new ResponseEntity<>(
+                new CustomErrorType("No such seller exists"), HttpStatus.NOT_FOUND); }
         LC.changeDATE(seller,lotID,newDate);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 
     // REMOVE OBJ
     @RequestMapping(method = RequestMethod.DELETE, value = "/seller/{sellerID}/{lotID}")
-    public void update(@PathVariable String lotID, @PathVariable String sellerID){
+    private void update(@PathVariable String lotID, @PathVariable String sellerID){
         LC.removeLOT(MP.getSeller(sellerID),lotID);
     }
-
-
-
 }

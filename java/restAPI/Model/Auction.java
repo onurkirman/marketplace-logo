@@ -41,16 +41,16 @@ public class Auction {
 
     public void setLot(Lot lot) { this.lot = lot; }
 
-    public String getId() { return id; }
+    public String getID() { return id; }
 
-    public void setId(String id) { this.id = id; }
+    public void setID(String id) { this.id = id; }
 
     public ArrayList<Bid> getBidList() { return bidList; }
 
     public void setBidList(ArrayList<Bid> bidList) { this.bidList = bidList; }
 
     @Override
-    public String toString(){ return "Auction ID: " + id +seller.toString() + " " + lot.toString() +
-            " ActionDay: " + auctionDay + " Price: " + price + " Duration: " + duration; }
+    public String toString(){ return "Auction ID: " + id + "; " + seller.toString() + "; " + lot.toString() +
+            "; ActionDay: " + auctionDay + ", Price: " + price + ", Duration: " + duration; }
 }
 

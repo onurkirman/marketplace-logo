@@ -11,7 +11,7 @@ class AuctionController {
 
     private int counter;
 
-    public AuctionController(){this.counter = 0;}
+    public AuctionController(){ this.counter = 0; }
 
     void addBid(Auction a, Bid b){
         counter++;
@@ -21,8 +21,5 @@ class AuctionController {
         a.setBidList(list);
     }
 
-    ArrayList<Bid> getBids(Auction a){
-        return a.getBidList();
-
-    }
+    ArrayList<Bid> getBids(Auction a){ return a.getBidList(); }
 }

@@ -28,32 +28,34 @@ class Marketplace {
     ArrayList<Seller> getSellerList() { return sellerList; }
 
 
-    void addAuction(Auction a){
+    void addAuction(Auction a){ addGeneric("auction",   a); }
+
+    void addBuyer(Buyer b){     addGeneric("buyer",     b); }
+
+    void addSeller(Seller s){   addGeneric("seller",    s); }
+
+    private <T> void addGeneric(String type, T obj){
         String id = createRandomID();
-        while(checkAUCTION_ID(""+id)){
-            id = createRandomID();
+        switch (type){
+            case "buyer":
+                while(checkBUYER_ID(id)){ id = createRandomID(); }
+                ((Buyer)obj).setID(id);
+                buyerList.add((Buyer)obj);
+                break;
+            case "seller":
+                while(checkSELLER_ID(id)){ id = createRandomID(); }
+                ((Seller)obj).setID(id);
+                sellerList.add((Seller)obj);
+                break;
+            case "auction":
+                while(checkAUCTION_ID(id)){ id = createRandomID(); }
+                ((Auction)obj).setID(id);
+                auctionList.add((Auction)obj);
+                break;
         }
-        a.setId(id);
-        auctionList.add(a);
     }
 
-    void addBuyer(Buyer b){
-        String id = createRandomID();
-        while(checkBUYER_ID(""+id)){
-            id = createRandomID();
-        }
-        b.setID(id);
-        buyerList.add(b);
-    }
 
-    void addSeller(Seller s){
-        String id = createRandomID();
-        while(checkSELLER_ID(""+id)){
-            id = createRandomID();
-        }
-        s.setID(id);
-        sellerList.add(s);
-    }
 
 
     Seller getSeller(String id){
@@ -76,13 +78,12 @@ class Marketplace {
 
     Auction getAuction(String id){
         for(Auction i : auctionList){
-            if(i.getId().equals(id)) {
+            if(i.getID().equals(id)) {
                 return i;
             }
         }
         return null;
     }
-
 
     private String createRandomID(){
         Random rand = new Random();
@@ -91,36 +92,53 @@ class Marketplace {
     }
 
     private boolean checkSELLER_ID(String id){
-        boolean ret = false;
-        for(Seller i: sellerList){
-            if(i.getID().equals(id)){
-                ret = true;
-                break;
-            }
-        }
-        return ret;
+        return checkGeneric("seller",id);
     }
 
     private boolean checkBUYER_ID(String id){
-        boolean ret = false;
-        for(Buyer i: buyerList){
-            if(i.getID().equals(id)){
-                ret = true;
-                break;
-            }
-        }
-        return ret;
+        return checkGeneric("buyer", id);
     }
 
     private boolean checkAUCTION_ID(String id){
+        return checkGeneric("auction", id);
+    }
+
+    private boolean checkGeneric(String type,String id){
         boolean ret = false;
-        for(Auction i: auctionList){
-            if(i.getId().equals(id)){
-                ret = true;
+        ArrayList<?> list = new ArrayList<>();
+
+        switch (type){
+            case "seller":
+                list = sellerList;
                 break;
+            case "buyer":
+                list = buyerList;
+                break;
+            case "auction":
+                list = auctionList;
+                break;
+        }
+
+        for(Object i : list){
+            if(i instanceof Seller){
+                if(((Seller)i).getID().equals(id)){
+                    ret = true;
+                    break;
+                }
+            }
+            else if(i instanceof Buyer){
+                if(((Buyer)i).getID().equals(id)){
+                    ret = true;
+                    break;
+                }
+            }
+            else if(i instanceof Auction){
+                if(((Auction)i).getID().equals(id)){
+                    ret = true;
+                    break;
+                }
             }
         }
         return ret;
     }
-
 }

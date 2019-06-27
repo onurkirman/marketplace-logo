@@ -29,5 +29,5 @@ public class Seller {
     public String getID(){ return id; }
 
     @Override
-    public String toString(){ return sellerName + " " + id; }
+    public String toString(){ return "SellerName: " + sellerName + ", ID: " + id; }
 }

@@ -35,5 +35,6 @@ public class Lot {
     public void setHarvestDate(String newDate){ this.harvestDate = newDate; }
 
     @Override
-    public String toString(){ return "LOT ID: " + lotID + "; "+ cultivar + " " + origin + " " + harvestDate + " " + weight; }
+    public String toString(){ return "LOT ID: " + lotID + ", "+ cultivar + ", " + origin + ", " + harvestDate +
+            ", " + weight; }
 }
