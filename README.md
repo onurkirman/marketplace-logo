@@ -1,2 +1,2 @@
 # Marketplace_LOGO
-Basic REST API MVC w/Java using Spring Boot Framework @LogoSoftware
+RESTful Spring Boot MVC Application w/Java @LogoSoftware 
