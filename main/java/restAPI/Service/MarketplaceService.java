@@ -56,8 +56,6 @@ public class MarketplaceService {
     }
 
 
-
-
     public Seller getSeller(String id){
         for(Seller i : sellerList){
             if(i.getID().equals(id)) {
@@ -141,4 +139,12 @@ public class MarketplaceService {
         }
         return ret;
     }
+
+    // Used for Test Cases
+    public void clearAll(){
+        auctionList.clear();
+        sellerList.clear();
+        buyerList.clear();
+    }
+
 }

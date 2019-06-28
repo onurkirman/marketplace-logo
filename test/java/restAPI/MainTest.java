@@ -75,7 +75,6 @@ public class MainTest {
         MS.clearAll();
     }
 
-
     @Test
     public void addLotWithNegativeWeight () throws Exception {
         Seller seller = new Seller("TestSeller");
