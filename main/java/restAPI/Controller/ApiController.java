@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import restAPI.Service.AuctionService;
+import restAPI.Service.LotService;
+import restAPI.Service.MarketplaceService;
 import restAPI.Util.CustomErrorType;
 import restAPI.Model.*;
 
@@ -18,11 +21,11 @@ public class ApiController {
     private static final Logger logger = LoggerFactory.getLogger(ApiController.class);
 
     @Autowired
-    private Marketplace         MP;
+    private MarketplaceService MP;
     @Autowired
-    private LotController       LC;
+    private LotService LC;
     @Autowired
-    private AuctionController   AC;
+    private AuctionService AC;
 
     @RequestMapping("/init")
     public void init(){
