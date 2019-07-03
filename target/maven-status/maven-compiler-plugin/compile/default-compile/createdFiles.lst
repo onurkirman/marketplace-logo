@@ -1,0 +1,11 @@
+restAPI\Model\Lot.class
+restAPI\Main.class
+restAPI\Service\AuctionService.class
+restAPI\Util\CustomErrorType.class
+restAPI\Model\Bid.class
+restAPI\Controller\ApiController.class
+restAPI\Model\Auction.class
+restAPI\Model\Buyer.class
+restAPI\Service\LotService.class
+restAPI\Service\MarketplaceService.class
+restAPI\Model\Seller.class
