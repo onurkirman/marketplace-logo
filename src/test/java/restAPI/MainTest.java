@@ -82,6 +82,51 @@ public class MainTest {
         MS.clearAll();
     }
 
+//
+
+    @Test
+    public void getBuyerDoesExists() throws Exception {
+        Buyer buyer = new Buyer("Test Buyer");
+        MS.addBuyer(buyer);
+        buyer.setID("1111");
+        this.mockMvc.perform(get("/buyer/1111")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void getBuyerDoesNotExists() throws Exception {
+        this.mockMvc.perform(get("/buyer/1111")).andDo(print()).andExpect(status().isNotFound());
+        MS.clearAll();
+    }
+
+//
+
+    @Test
+    public void getAuctionDoesExists() throws Exception {
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        Auction auctionInserted = new Auction(seller,lot,"28 July 2019","5.5", "2");
+        MS.addAuction(auctionInserted);
+        auctionInserted.setID("1111");
+
+        this.mockMvc.perform(get("/auction/1111")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void getAuctionDoesNotExists() throws Exception {
+        this.mockMvc.perform(get("/auction/1111")).andDo(print()).andExpect(status().isNotFound());
+        MS.clearAll();
+    }
+
+
+
+
     @Test
     public void addingSellerUsingJson () throws Exception {
         Object randomObj = new Object() {
