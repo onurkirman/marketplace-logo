@@ -43,6 +43,46 @@ public class MainTest {
     }
 
     @Test
+    public void showSellers() throws Exception {
+        initForTesting();
+        this.mockMvc.perform(get("/sellers")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void showBuyers() throws Exception {
+        initForTesting();
+        this.mockMvc.perform(get("/buyers")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void showAuctions() throws Exception {
+        initForTesting();
+        this.mockMvc.perform(get("/auctions")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    private void initForTesting() throws Exception {
+        this.mockMvc.perform(get("/init")).andDo(print());
+    }
+
+    @Test
+    public void getSellerDoesExists() throws Exception {
+        Seller seller = new Seller("Test Seller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        this.mockMvc.perform(get("/seller/1111")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void getSellerDoesNotExists() throws Exception {
+        this.mockMvc.perform(get("/seller/1111")).andDo(print()).andExpect(status().isNotFound());
+        MS.clearAll();
+    }
+
+    @Test
     public void addingSellerUsingJson () throws Exception {
         Object randomObj = new Object() {
             public final String sellerName = "Test Seller";
@@ -134,31 +174,6 @@ public class MainTest {
                 .andDo(print()).andExpect(status().isNotFound());
         MS.clearAll();
     }
-
-    @Test
-    public void showSellers() throws Exception {
-        this.mockMvc.perform(get("/init")).andDo(print());
-        this.mockMvc.perform(get("/sellers")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
-    }
-
-    @Test
-    public void showBuyers() throws Exception {
-        this.mockMvc.perform(get("/init")).andDo(print());
-        this.mockMvc.perform(get("/buyers")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
-    }
-
-    @Test
-    public void showAuctions() throws Exception {
-        this.mockMvc.perform(get("/init")).andDo(print());
-        this.mockMvc.perform(get("/auctions")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
-    }
-
-
-
-
 
 
 
