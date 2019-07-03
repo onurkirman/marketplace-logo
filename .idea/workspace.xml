@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e73a7488-0161-4e9f-afb7-2298be2e3720" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restAPI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restAPI/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/restAPI/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restAPI/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/restAPI/Controller/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/restAPI/Controller/ApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -47,10 +47,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            <state relative-caret-position="177">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
               <folding>
-                <element signature="method#showAllGeneric#0;class#ApiController#0" />
+                <element signature="e#1394#1395#0" expanded="true" />
+                <element signature="e#1442#1443#0" expanded="true" />
+                <element signature="e#1518#1519#0" expanded="true" />
+                <element signature="e#1565#1566#0" expanded="true" />
+                <element signature="e#1645#1646#0" expanded="true" />
+                <element signature="e#1694#1695#0" expanded="true" />
                 <element signature="method#getGeneric#0;class#ApiController#0" />
                 <element signature="method#showBids#0;class#ApiController#0" />
                 <element signature="method#addSeller#0;class#ApiController#0" />
@@ -68,8 +73,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="154" column="10" selection-start-line="154" selection-start-column="10" selection-end-line="154" selection-end-column="10" />
+            <state relative-caret-position="454">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+              <folding>
+                <element signature="method#initForTesting#0;class#MainTest#0" />
+                <element signature="method#addLotWithNotExistingSeller#0;class#MainTest#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,9 +115,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="190" />
-    <option name="y" value="42" />
-    <option name="width" value="1548" />
-    <option name="height" value="943" />
+    <option name="y" value="41" />
+    <option name="width" value="1549" />
+    <option name="height" value="944" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -122,38 +131,38 @@
         <subPane>
           <expand>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restAPI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -161,8 +170,8 @@
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -170,21 +179,21 @@
               <item name="Service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -231,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.showSellers">
+  <component name="RunManager" selected="JUnit.MainTest (1)">
     <configuration name="MainTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
@@ -247,8 +256,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="GradleProject" />
+    <configuration name="MainTest.getSellerDoesNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="marketplace-logo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="restAPI.*" />
@@ -257,7 +266,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="restAPI" />
       <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="getSellerDoesNotExists" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.showBuyers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="marketplace-logo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAPI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAPI" />
+      <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
+      <option name="METHOD_NAME" value="showBuyers" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -300,10 +326,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MainTest.showSellers" />
         <item itemvalue="JUnit.MainTest (1)" />
+        <item itemvalue="JUnit.MainTest.getSellerDoesNotExists" />
+        <item itemvalue="JUnit.MainTest.showSellers" />
+        <item itemvalue="JUnit.MainTest.showBuyers" />
         <item itemvalue="Spring Boot.Main (1)" />
-        <item itemvalue="JUnit.MainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -320,28 +347,57 @@
       <workItem from="1562136261815" duration="91000" />
       <workItem from="1562136364007" duration="696000" />
       <workItem from="1562142582109" duration="1349000" />
+      <workItem from="1562151988431" duration="1738000" />
     </task>
+    <task id="LOCAL-00001" summary="Specific Getter Service tests added.">
+      <created>1562153479836</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1562153479836</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainTest - 2019.07.03 at 09h 46m 36s.xml">
-      <configuration name="MainTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainTest_(1) - 2019.07.03 at 11h 30m 32s.xml">
       <configuration name="MainTest (1)" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MainTest_showSellers - 2019.07.03 at 13h 56m 44s.xml">
       <configuration name="MainTest.showSellers" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainTest_(1) - 2019.07.03 at 14h 14m 34s.xml">
+      <configuration name="MainTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_showBuyers - 2019.07.03 at 14h 20m 04s.xml">
+      <configuration name="MainTest.showBuyers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_showBuyers - 2019.07.03 at 14h 21m 06s.xml">
+      <configuration name="MainTest.showBuyers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_showBuyers - 2019.07.03 at 14h 21m 21s.xml">
+      <configuration name="MainTest.showBuyers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_showBuyers - 2019.07.03 at 14h 21m 43s.xml">
+      <configuration name="MainTest.showBuyers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_showSellers - 2019.07.03 at 14h 23m 55s.xml">
+      <configuration name="MainTest.showSellers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_showSellers - 2019.07.03 at 14h 24m 29s.xml">
+      <configuration name="MainTest.showSellers" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getSellerDoesNotExists - 2019.07.03 at 14h 29m 55s.xml">
+      <configuration name="MainTest.getSellerDoesNotExists" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2136000" />
+    <option name="totallyTimeSpent" value="3874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.25704697" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.26107383" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.25302014" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -350,11 +406,10 @@
       <window_info id="Favorites" order="6" sideWeight="0.50141644" side_tool="true" weight="0.25302014" />
       <window_info id="Learn" order="7" />
       <window_info id="Web" order="8" sideWeight="0.50141644" side_tool="true" weight="0.25302014" />
-      <window_info anchor="bottom" id="Run Dashboard" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.37677053" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -366,7 +421,8 @@
       <window_info anchor="bottom" id="Statistic" order="12" weight="0.3286119" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="15" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.3286119" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -381,6 +437,46 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Specific Getter Service tests added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Specific Getter Service tests added." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Main.java">
@@ -399,10 +495,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        <state relative-caret-position="177">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
           <folding>
-            <element signature="method#showAllGeneric#0;class#ApiController#0" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1518#1519#0" expanded="true" />
+            <element signature="e#1565#1566#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+            <element signature="e#1694#1695#0" expanded="true" />
             <element signature="method#getGeneric#0;class#ApiController#0" />
             <element signature="method#showBids#0;class#ApiController#0" />
             <element signature="method#addSeller#0;class#ApiController#0" />
@@ -418,8 +519,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="154" column="10" selection-start-line="154" selection-start-column="10" selection-end-line="154" selection-end-column="10" />
+        <state relative-caret-position="454">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+          <folding>
+            <element signature="method#initForTesting#0;class#MainTest#0" />
+            <element signature="method#addLotWithNotExistingSeller#0;class#MainTest#0" />
+          </folding>
         </state>
       </provider>
     </entry>
