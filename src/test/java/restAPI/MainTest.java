@@ -1,8 +1,6 @@
 package restAPI;
 
-import ch.qos.logback.core.encoder.EchoEncoder;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,7 @@ import restAPI.Model.Seller;
 import restAPI.Service.LotService;
 import restAPI.Service.MarketplaceService;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -136,6 +134,35 @@ public class MainTest {
                 .andDo(print()).andExpect(status().isNotFound());
         MS.clearAll();
     }
+
+    @Test
+    public void showSellers() throws Exception {
+        this.mockMvc.perform(get("/init")).andDo(print());
+        this.mockMvc.perform(get("/sellers")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void showBuyers() throws Exception {
+        this.mockMvc.perform(get("/init")).andDo(print());
+        this.mockMvc.perform(get("/buyers")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void showAuctions() throws Exception {
+        this.mockMvc.perform(get("/init")).andDo(print());
+        this.mockMvc.perform(get("/auctions")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+
+
+
+
+
+
+
 
     @Test
     public void addingBuyerUsingObject () {

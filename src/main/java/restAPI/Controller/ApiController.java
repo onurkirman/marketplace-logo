@@ -6,11 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import restAPI.Model.*;
 import restAPI.Service.AuctionService;
 import restAPI.Service.LotService;
 import restAPI.Service.MarketplaceService;
 import restAPI.Util.CustomErrorType;
-import restAPI.Model.*;
 
 import java.util.ArrayList;
 
@@ -40,6 +40,7 @@ public class ApiController {
         MP.addAuction(auction);
         AC.addBid(auction,new Bid(buyer,lot,4.0));
     }
+
 
     // GET ALL LISTS
     @RequestMapping("/sellers")
