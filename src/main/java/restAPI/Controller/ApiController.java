@@ -213,7 +213,14 @@ public class ApiController {
 
     // REMOVE OBJ
     @RequestMapping(method = RequestMethod.DELETE, value = "/seller/{sellerID}/{lotID}")
-    private void deleteLot(@PathVariable String lotID, @PathVariable String sellerID){
-        LC.removeLOT(MP.getSeller(sellerID),lotID);
+    private ResponseEntity<?> deleteLot(@PathVariable String lotID, @PathVariable String sellerID){
+        Seller seller = MP.getSeller(sellerID);
+        if(seller == null){ return  new ResponseEntity<>(
+                new CustomErrorType("No such seller exists"), HttpStatus.NOT_FOUND); }
+        boolean isFound = LC.removeLOT(seller,lotID);
+        if(!isFound){ return  new ResponseEntity<>(
+                new CustomErrorType("No such lot exists"), HttpStatus.NOT_FOUND); };
+        return  new ResponseEntity<>(
+                new CustomErrorType("Lot is removed"), HttpStatus.OK);
     }
 }

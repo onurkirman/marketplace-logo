@@ -314,17 +314,16 @@ public class MainTest {
         lot.set_lotID(1111);
 
         this.mockMvc.perform(delete("/seller/1111/1111"))
-                .andDo(print())
-                .andExpect(status().isOk());
+                    .andDo(print())
+                    .andExpect(status().isOk());
         MS.clearAll();
     }
 
     @Test
     public void removeLotNotExists () throws Exception {
-
         this.mockMvc.perform(delete("/seller/1111/1111"))
-                .andDo(print())
-                .andExpect(status().isOk());
+                    .andDo(print())
+                    .andExpect(status().isNotFound());
         MS.clearAll();
     }
 

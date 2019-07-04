@@ -22,10 +22,11 @@ public class LotService {
         s.setLOTlist(list);
     }
 
-    public void removeLOT(Seller s, String lotID){
+    public boolean removeLOT(Seller s, String lotID){
         ArrayList<Lot> list = s.getLOTlist();
-        list.removeIf(i -> i.get_lotID().equals(lotID));
+        boolean isFound = list.removeIf(i -> i.get_lotID().equals(lotID));
         s.setLOTlist(list);
+        return isFound;
     }
 
     @SuppressWarnings("SpellCheckingInspection")
