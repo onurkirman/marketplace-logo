@@ -37,29 +37,29 @@ public class MainTest {
 
     @Test
     public void initUsingJsonRequest () throws Exception {
-        this.mockMvc.perform(get("/init")).andDo(print()).andExpect(status().isOk());
         MS.clearAll();
+        this.mockMvc.perform(get("/init")).andDo(print()).andExpect(status().isOk());
     }
 
     @Test
     public void showSellers() throws Exception {
+        MS.clearAll();
         initForTesting();
         this.mockMvc.perform(get("/sellers")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void showBuyers() throws Exception {
+        MS.clearAll();
         initForTesting();
         this.mockMvc.perform(get("/buyers")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void showAuctions() throws Exception {
+        MS.clearAll();
         initForTesting();
         this.mockMvc.perform(get("/auctions")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     private void initForTesting() throws Exception {
@@ -68,39 +68,40 @@ public class MainTest {
 
     @Test
     public void getSellerDoesExists() throws Exception {
+        MS.clearAll();
         Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         this.mockMvc.perform(get("/seller/1111")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void getSellerDoesNotExists() throws Exception {
-        this.mockMvc.perform(get("/seller/1111")).andDo(print()).andExpect(status().isNotFound());
         MS.clearAll();
+        this.mockMvc.perform(get("/seller/1111")).andDo(print()).andExpect(status().isNotFound());
     }
 
 //
 
     @Test
     public void getBuyerDoesExists() throws Exception {
+        MS.clearAll();
         Buyer buyer = new Buyer("Test Buyer");
         MS.addBuyer(buyer);
         buyer.setID("1111");
         this.mockMvc.perform(get("/buyer/1111")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void getBuyerDoesNotExists() throws Exception {
-        this.mockMvc.perform(get("/buyer/1111")).andDo(print()).andExpect(status().isNotFound());
         MS.clearAll();
+        this.mockMvc.perform(get("/buyer/1111")).andDo(print()).andExpect(status().isNotFound());
     }
 
 
     @Test
     public void getAuctionDoesExists() throws Exception {
+        MS.clearAll();
         Seller seller = new Seller("TestSeller");
         MS.addSeller(seller);
         seller.setID("1111");
@@ -113,17 +114,17 @@ public class MainTest {
         auctionInserted.setID("1111");
 
         this.mockMvc.perform(get("/auction/1111")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void getAuctionDoesNotExists() throws Exception {
-        this.mockMvc.perform(get("/auction/1111")).andDo(print()).andExpect(status().isNotFound());
         MS.clearAll();
+        this.mockMvc.perform(get("/auction/1111")).andDo(print()).andExpect(status().isNotFound());
     }
 
     @Test
     public void getBidsDoesExists() throws Exception {
+        MS.clearAll();
         Seller seller = new Seller("TestSeller");
         MS.addSeller(seller);
         seller.setID("1111");
@@ -141,17 +142,17 @@ public class MainTest {
         AS.addBid(auction, bid);
 
         this.mockMvc.perform(get("/showBids/1111")).andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void getBidsDoesNotExists() throws Exception {
-        this.mockMvc.perform(get("/showBids/1111")).andDo(print()).andExpect(status().isNotFound());
         MS.clearAll();
+        this.mockMvc.perform(get("/showBids/1111")).andDo(print()).andExpect(status().isNotFound());
     }
 
     @Test
     public void getNotBiddenAuction() throws Exception {
+        MS.clearAll();
         Seller seller = new Seller("TestSeller");
         MS.addSeller(seller);
         seller.setID("1111");
@@ -164,12 +165,12 @@ public class MainTest {
         auction.setID("1111");
 
         this.mockMvc.perform(get("/showBids/1111")).andDo(print()).andExpect(status().isNotFound());
-        MS.clearAll();
     }
 
 
     @Test
     public void addingSellerUsingJson () throws Exception {
+        MS.clearAll();
         Object randomObj = new Object() {
             public final String sellerName = "Test Seller";
         };
@@ -181,11 +182,11 @@ public class MainTest {
                     .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                     .content(json))
                     .andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void addingBuyerUsingJson () throws Exception {
+        MS.clearAll();
         Object randomObj = new Object() {
             public final String buyerName = "Test Buyer";
         };
@@ -196,11 +197,11 @@ public class MainTest {
                     .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                     .content(json))
                     .andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void addingAuctionUsingJson () throws Exception {
+        MS.clearAll();
         Object randomObj = new Object() {
             public final String auctionDay = "07 June 2019";
             public final String price = "3";
@@ -220,12 +221,12 @@ public class MainTest {
                     .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                     .content(json))
                     .andDo(print()).andExpect(status().isOk());
-        MS.clearAll();
     }
 
 
     @Test
     public void addLotWithNegativeWeight () throws Exception {
+        MS.clearAll();
         Seller seller = new Seller("TestSeller");
         MS.addSeller(seller);
         seller.setID("1111");
@@ -243,11 +244,11 @@ public class MainTest {
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                 .content(json))
                 .andDo(print()).andExpect(status().isForbidden());
-        MS.clearAll();
     }
 
     @Test
     public void addLotWithNotSufficientWeight () throws Exception {
+        MS.clearAll();
         Seller seller = new Seller("TestSeller");
         MS.addSeller(seller);
         seller.setID("1111");
@@ -265,11 +266,11 @@ public class MainTest {
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                 .content(json))
                 .andDo(print()).andExpect(status().isForbidden());
-        MS.clearAll();
     }
 
     @Test
     public void addLotWithNotExistingSeller () throws Exception {
+        MS.clearAll();
         Object randomObj = new Object() {
             public final String cultivar = "Test Banana";
             public final String origin = "Turkey";
@@ -283,13 +284,13 @@ public class MainTest {
                 .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
                 .content(json))
                 .andDo(print()).andExpect(status().isNotFound());
-        MS.clearAll();
     }
 
 
 
     @Test
     public void updateLotDate () throws Exception {
+        MS.clearAll();
         Seller seller = new Seller("TestSeller");
         MS.addSeller(seller);
         seller.setID("1111");
@@ -300,11 +301,11 @@ public class MainTest {
         this.mockMvc.perform(put("/updateLotDate/1111/1111/04 March 2019"))
                     .andDo(print())
                     .andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void removeLotExists () throws Exception {
+        MS.clearAll();
         Seller seller = new Seller("TestSeller");
         MS.addSeller(seller);
         seller.setID("1111");
@@ -315,15 +316,14 @@ public class MainTest {
         this.mockMvc.perform(delete("/seller/1111/1111"))
                     .andDo(print())
                     .andExpect(status().isOk());
-        MS.clearAll();
     }
 
     @Test
     public void removeLotNotExists () throws Exception {
+        MS.clearAll();
         this.mockMvc.perform(delete("/seller/1111/1111"))
                     .andDo(print())
                     .andExpect(status().isNotFound());
-        MS.clearAll();
     }
 
     @Test
@@ -473,26 +473,27 @@ public class MainTest {
 // Unit Testing *************************************************
     @Test
     public void addingBuyerUsingObject () {
-        Buyer buyerInserted = new Buyer("TestBuyer");
+        MS.clearAll();
+        Buyer buyerInserted = new Buyer("Test Buyer");
         MS.addBuyer(buyerInserted);
         buyerInserted.setID("1111");
         Buyer buyerGathered = MS.getBuyer("1111");
         assertEquals(buyerInserted,buyerGathered);
-        MS.clearAll();
     }
 
     @Test
     public void addingSellerUsingObject () {
+        MS.clearAll();
         Seller sellerInserted = new Seller("TestBuyer");
         MS.addSeller(sellerInserted);
         sellerInserted.setID("1111");
         Seller sellerGathered = MS.getSeller("1111");
         assertEquals(sellerInserted,sellerGathered);
-        MS.clearAll();
     }
 
     @Test
     public void addingAuctionUsingObject () {
+        MS.clearAll();
         Seller seller = new Seller("TestSeller");
         MS.addSeller(seller);
         seller.setID("1111");
@@ -505,7 +506,6 @@ public class MainTest {
         auctionInserted.setID("1111");
         Auction auctionGathered = MS.getAuction("1111");
         assertEquals(auctionInserted,auctionGathered);
-        MS.clearAll();
     }
 
 }
