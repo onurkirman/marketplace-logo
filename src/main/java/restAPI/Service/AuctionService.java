@@ -13,12 +13,14 @@ public class AuctionService {
 
     public AuctionService(){ this.counter = 0; }
 
-    public void addBid(Auction a, Bid b){
+    public void addBid(Auction auction, Bid bid){
         counter++;
-        b.setID("" + counter);
-        ArrayList<Bid> list = a.getBidList();
-        list.add(b);
-        a.setBidList(list);
+        bid.setID("" + counter);
+        ArrayList<Bid> list = auction.getBidList();
+        list.add(bid);
+        auction.setBidList(list);
+        if(auction.getWinner() == null){ auction.setWinner(bid); }
+        else if(list.size() > 1 && ( bid.getPrice() > auction.getWinner().getPrice())){ auction.setWinner(bid); }
     }
 
     public ArrayList<Bid> getBids(Auction a){ return a.getBidList(); }

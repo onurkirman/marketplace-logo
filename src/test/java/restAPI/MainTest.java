@@ -326,6 +326,149 @@ public class MainTest {
         MS.clearAll();
     }
 
+    @Test
+    public void addBidOverAuctionPrice() throws Exception {
+        MS.clearAll();
+        Object randomObj = new Object() {
+            public final double price = 5.6;
+        };
+
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        Buyer buyer = new Buyer("Test Buyer");
+        MS.addBuyer(buyer);
+        buyer.setID("1111");
+
+        Auction auction = new Auction(seller,lot,"28 July 2019","5.5", "2");
+        MS.addAuction(auction);
+        auction.setID("1111");
+
+
+        String json = objectMapper.writeValueAsString(randomObj);
+
+        this.mockMvc.perform(post("/addBid/1111/1111")
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content(json))
+                .andDo(print()).andExpect(status().isOk());
+    }
+
+    @Test
+    public void addMultipleBidsOverAuctionPrice() throws Exception {
+        MS.clearAll();
+        Object randomObj = new Object() {
+            public final double price = 5.8;
+        };
+
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        Buyer buyer = new Buyer("Test Buyer");
+        MS.addBuyer(buyer);
+        buyer.setID("1111");
+
+        Auction auction = new Auction(seller,lot,"28 July 2019","5.5", "2");
+        MS.addAuction(auction);
+        auction.setID("1111");
+
+        Bid bid = new Bid(buyer,lot,5.6);
+        AS.addBid(auction, bid);
+
+        String json = objectMapper.writeValueAsString(randomObj);
+
+        mockMvc.perform(post("/addBid/1111/1111")
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content(json))
+                .andDo(print()).andExpect(status().isOk());
+
+        Bid winnerBid = auction.getBidList().get(1);
+        assertEquals(auction.getWinner(),winnerBid);
+    }
+
+    @Test
+    public void addBidLowerAuctionPrice() throws Exception {
+        MS.clearAll();
+        Object randomObj = new Object() {
+            public final double price = 4.6;
+        };
+
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        Buyer buyer = new Buyer("Test Buyer");
+        MS.addBuyer(buyer);
+        buyer.setID("1111");
+
+        Auction auction = new Auction(seller,lot,"28 July 2019","5.5", "2");
+        MS.addAuction(auction);
+        auction.setID("1111");
+
+        String json = objectMapper.writeValueAsString(randomObj);
+
+        this.mockMvc.perform(post("/addBid/1111/1111")
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content(json))
+                .andDo(print()).andExpect(status().isForbidden());
+    }
+
+    @Test
+    public void addBidNonExistingAuction() throws Exception {
+        MS.clearAll();
+        Object randomObj = new Object() {
+            public final double price = 5.6;
+        };
+
+        Buyer buyer = new Buyer("Test Buyer");
+        MS.addBuyer(buyer);
+        buyer.setID("1111");
+
+        String json = objectMapper.writeValueAsString(randomObj);
+
+        this.mockMvc.perform(post("/addBid/1111/1111")
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content(json))
+                .andDo(print()).andExpect(status().isNotFound());
+    }
+
+    @Test
+    public void addBidNotExistingBuyer() throws Exception {
+        MS.clearAll();
+        Object randomObj = new Object() {
+            public final double price = 5.6;
+        };
+
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        Auction auction = new Auction(seller,lot,"28 July 2019","5.5", "2");
+        MS.addAuction(auction);
+        auction.setID("1111");
+
+        String json = objectMapper.writeValueAsString(randomObj);
+
+        this.mockMvc.perform(post("/addBid/1111/1111")
+                .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                .content(json))
+                .andDo(print()).andExpect(status().isNotFound());
+    }
+
+
 
 // Unit Testing *************************************************
     @Test

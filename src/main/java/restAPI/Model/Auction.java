@@ -14,6 +14,7 @@ public class Auction {
     private Seller seller;
     private Lot    lot;
     private ArrayList<Bid> bidList;
+    private Bid winner;
 
     @JsonCreator
     public Auction(@JsonProperty("seller") Seller seller, @JsonProperty("lot") Lot lot,@JsonProperty("auctionDay") String auctionDay,
@@ -32,7 +33,6 @@ public class Auction {
 
     public String getDuration() { return duration; }
 
-
     public Seller getSeller() { return seller; }
 
     public void setSeller(Seller seller) { this.seller = seller; }
@@ -48,6 +48,12 @@ public class Auction {
     public ArrayList<Bid> getBidList() { return bidList; }
 
     public void setBidList(ArrayList<Bid> bidList) { this.bidList = bidList; }
+
+    public Bid getWinner() { return winner; }
+
+    public void setWinner(Bid winner) { // new Bid(winner.getBuyer(),winner.getLot(),winner.getPrice())
+        this.winner = winner;
+    }
 
     @Override
     public String toString(){ return "Auction ID: " + id + "; " + seller.toString() + "; " + lot.toString() +

@@ -76,6 +76,40 @@ public class ApiController {
     }
 
 
+    @RequestMapping("/showBids/{id}")
+    private ResponseEntity<?> showBids(@PathVariable String id){
+        logger.info("Fetching bids with auction id {}", id);
+        Auction auction = MP.getAuction(id);
+        if(auction == null){
+            logger.error("There is no such auction with id {}", id);
+            return new ResponseEntity<>(new CustomErrorType("No such auction exists"), HttpStatus.NOT_FOUND);
+        }
+        ArrayList<Bid> list = AC.getBids(auction);
+        if(list.size() == 0){
+            logger.error("There is no bid to fetch");
+            return new ResponseEntity<>(new CustomErrorType("There is no such bid to show"),
+                    HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(list, HttpStatus.OK);
+    }
+
+    @RequestMapping("/showWinnerBid/{id}")
+    private ResponseEntity<?> showWinnerBid(@PathVariable String id){
+        logger.info("Fetching bids with auction id {}", id);
+        Auction auction = MP.getAuction(id);
+        if(auction == null){
+            logger.error("There is no such auction with id {}", id);
+            return new ResponseEntity<>(new CustomErrorType("No such auction exists"), HttpStatus.NOT_FOUND);
+        }
+        ArrayList<Bid> list = AC.getBids(auction);
+        if(list.size() == 0){
+            logger.error("There is no bid to fetch");
+            return new ResponseEntity<>(new CustomErrorType("There is no such bid to show"),
+                    HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(auction.getWinner(), HttpStatus.OK);
+    }
+
     // GET SPECIFIC OBJ
     @RequestMapping("/seller/{id}")
     private ResponseEntity<?> getSeller(@PathVariable String id){
@@ -117,23 +151,6 @@ public class ApiController {
 
     private <T> boolean isNull(T element){
         return element == null;
-    }
-
-    @RequestMapping("/showBids/{id}")
-    private ResponseEntity<?> showBids(@PathVariable String id){
-        logger.info("Fetching bids with auction id {}", id);
-        Auction auction = MP.getAuction(id);
-        if(auction == null){
-            logger.error("There is no such auction with id {}", id);
-            return new ResponseEntity<>(new CustomErrorType("No such auction exists"), HttpStatus.NOT_FOUND);
-        }
-        ArrayList<Bid> list = AC.getBids(auction);
-        if(list.size() == 0){
-            logger.error("There is no bid to fetch");
-            return new ResponseEntity<>(new CustomErrorType("There is no such bid to show"),
-                    HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(list, HttpStatus.OK);
     }
 
 
@@ -186,10 +203,13 @@ public class ApiController {
         logger.info("Trying to add a bid");
         Auction auction = MP.getAuction(auctionID);
         if(auction == null){return  new ResponseEntity<>(
-                new CustomErrorType("No such seller exists"), HttpStatus.NOT_FOUND); }
+                new CustomErrorType("No such auction exists"), HttpStatus.NOT_FOUND); }
         Buyer buyer = MP.getBuyer(buyerID);
+        if(Double.valueOf(auction.getPrice()) > bid.getPrice()){ return  new ResponseEntity<>(
+                new CustomErrorType("Price of Bid is Lower. It is forbidden to enter such bid!!"),
+                                                                                        HttpStatus.FORBIDDEN); }
         if(buyer == null){return  new ResponseEntity<>(
-                new CustomErrorType("No such seller exists"), HttpStatus.NOT_FOUND); }
+                new CustomErrorType("No such buyer exists"), HttpStatus.NOT_FOUND); }
         bid.setBuyer(buyer);
         bid.setLot(auction.getLot());
         AC.addBid(auction, bid);
