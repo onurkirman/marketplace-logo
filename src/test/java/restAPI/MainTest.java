@@ -98,7 +98,6 @@ public class MainTest {
         MS.clearAll();
     }
 
-//
 
     @Test
     public void getAuctionDoesExists() throws Exception {
@@ -328,7 +327,7 @@ public class MainTest {
     }
 
 
-//
+// Unit Testing *************************************************
     @Test
     public void addingBuyerUsingObject () {
         Buyer buyerInserted = new Buyer("TestBuyer");
