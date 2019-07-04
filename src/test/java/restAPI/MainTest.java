@@ -298,7 +298,7 @@ public class MainTest {
         LS.addLOT(seller, lot);
         lot.set_lotID(1111);
 
-        this.mockMvc.perform(put("/updateDate/1111/1111/04 March 2019"))
+        this.mockMvc.perform(put("/updateLotDate/1111/1111/04 March 2019"))
                     .andDo(print())
                     .andExpect(status().isOk());
         MS.clearAll();

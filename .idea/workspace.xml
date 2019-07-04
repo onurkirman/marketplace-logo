@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e73a7488-0161-4e9f-afb7-2298be2e3720" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/restAPI/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restAPI/MainTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
+            <state relative-caret-position="235">
               <caret line="202" column="67" selection-start-line="202" selection-start-column="67" selection-end-line="202" selection-end-column="67" />
               <folding>
                 <element signature="e#1394#1395#0" expanded="true" />
@@ -75,7 +68,6 @@
                 <element signature="method#addBuyer#0;class#ApiController#0" />
                 <element signature="method#addAuction#0;class#ApiController#0" />
                 <element signature="method#addLot#0;class#ApiController#0" />
-                <element signature="method#updateDate#0;class#ApiController#0" />
               </folding>
             </state>
           </provider>
@@ -84,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="315" column="44" selection-start-line="315" selection-start-column="44" selection-end-line="315" selection-end-column="44" />
+            <state relative-caret-position="261">
+              <caret line="300" column="44" selection-start-line="300" selection-start-column="44" selection-end-line="300" selection-end-column="44" />
               <folding>
                 <element signature="method#initForTesting#0;class#MainTest#0" />
               </folding>
@@ -255,22 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.addingAuctionUsingJson">
-    <configuration name="MainTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="marketplace-logo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="restAPI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="restAPI" />
-      <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MainTest.updateLotDate">
     <configuration name="MainTest.addingAuctionUsingJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
@@ -335,6 +312,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainTest.updateLotDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="marketplace-logo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAPI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAPI" />
+      <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
+      <option name="METHOD_NAME" value="updateLotDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="GradleProject" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="restAPI.Main" />
@@ -344,11 +337,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest.updateLotDate" />
         <item itemvalue="JUnit.MainTest.addingAuctionUsingJson" />
         <item itemvalue="JUnit.MainTest.getNotBiddenAuction" />
         <item itemvalue="JUnit.MainTest.getBidsDoesNotExists" />
         <item itemvalue="JUnit.MainTest.getBidsDoesExists" />
-        <item itemvalue="JUnit.MainTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -366,7 +359,7 @@
       <workItem from="1562136364007" duration="696000" />
       <workItem from="1562142582109" duration="1349000" />
       <workItem from="1562151988431" duration="1738000" />
-      <workItem from="1562153917281" duration="4188000" />
+      <workItem from="1562153917281" duration="4744000" />
     </task>
     <task id="LOCAL-00001" summary="Specific Getter Service tests added.">
       <created>1562153479836</created>
@@ -382,16 +375,17 @@
       <option name="project" value="LOCAL" />
       <updated>1562160311572</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Test cases such object adders, getters, updater and remover added. Also the method used for &quot;Removing Lot&quot; is updated.">
+      <created>1562222219258</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562222219258</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainTest_showSellers - 2019.07.03 at 14h 23m 55s.xml">
-      <configuration name="MainTest.showSellers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_showSellers - 2019.07.03 at 14h 24m 29s.xml">
-      <configuration name="MainTest.showSellers" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainTest_getSellerDoesNotExists - 2019.07.03 at 14h 29m 55s.xml">
       <configuration name="MainTest.getSellerDoesNotExists" configurationId="JUnit" />
     </history-entry>
@@ -416,9 +410,15 @@
     <history-entry file="MainTest_addingAuctionUsingJson - 2019.07.04 at 09h 27m 03s.xml">
       <configuration name="MainTest.addingAuctionUsingJson" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainTest_updateLotDate - 2019.07.04 at 09h 41m 28s.xml">
+      <configuration name="MainTest.updateLotDate" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_updateLotDate - 2019.07.04 at 09h 41m 47s.xml">
+      <configuration name="MainTest.updateLotDate" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8062000" />
+    <option name="totallyTimeSpent" value="8618000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -494,7 +494,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Specific Getter Service tests added." />
     <MESSAGE value="Other specific getter service tests added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Other specific getter service tests added." />
+    <MESSAGE value="Test cases such object adders, getters, updater and remover added. Also the method used for &quot;Removing Lot&quot; is updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test cases such object adders, getters, updater and remover added. Also the method used for &quot;Removing Lot&quot; is updated." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -556,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
+        <state relative-caret-position="235">
           <caret line="202" column="67" selection-start-line="202" selection-start-column="67" selection-end-line="202" selection-end-column="67" />
           <folding>
             <element signature="e#1394#1395#0" expanded="true" />
@@ -573,15 +574,14 @@
             <element signature="method#addBuyer#0;class#ApiController#0" />
             <element signature="method#addAuction#0;class#ApiController#0" />
             <element signature="method#addLot#0;class#ApiController#0" />
-            <element signature="method#updateDate#0;class#ApiController#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="315" column="44" selection-start-line="315" selection-start-column="44" selection-end-line="315" selection-end-column="44" />
+        <state relative-caret-position="261">
+          <caret line="300" column="44" selection-start-line="300" selection-start-column="44" selection-end-line="300" selection-end-column="44" />
           <folding>
             <element signature="method#initForTesting#0;class#MainTest#0" />
           </folding>
