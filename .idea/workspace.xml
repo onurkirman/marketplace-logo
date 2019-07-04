@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e73a7488-0161-4e9f-afb7-2298be2e3720" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/restAPI/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restAPI/MainTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/restAPI/MainTest$3.class" afterDir="false" />
@@ -30,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Service/MarketplaceService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -45,10 +47,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Auction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="386">
+              <caret line="202" column="67" selection-start-line="202" selection-start-column="67" selection-end-line="202" selection-end-column="67" />
               <folding>
                 <element signature="e#1394#1395#0" expanded="true" />
                 <element signature="e#1442#1443#0" expanded="true" />
@@ -56,15 +67,15 @@
                 <element signature="e#1565#1566#0" expanded="true" />
                 <element signature="e#1645#1646#0" expanded="true" />
                 <element signature="e#1694#1695#0" expanded="true" />
+                <element signature="e#2650#2651#0" expanded="true" />
+                <element signature="e#2698#2699#0" expanded="true" />
                 <element signature="method#getGeneric#0;class#ApiController#0" />
                 <element signature="method#showBids#0;class#ApiController#0" />
                 <element signature="method#addSeller#0;class#ApiController#0" />
                 <element signature="method#addBuyer#0;class#ApiController#0" />
                 <element signature="method#addAuction#0;class#ApiController#0" />
                 <element signature="method#addLot#0;class#ApiController#0" />
-                <element signature="method#addBid#0;class#ApiController#0" />
                 <element signature="method#updateDate#0;class#ApiController#0" />
-                <element signature="method#update#0;class#ApiController#0" />
               </folding>
             </state>
           </provider>
@@ -73,17 +84,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="403">
+              <caret line="315" column="44" selection-start-line="315" selection-start-column="44" selection-end-line="315" selection-end-column="44" />
               <folding>
                 <element signature="method#initForTesting#0;class#MainTest#0" />
-                <element signature="method#addLotWithNotExistingSeller#0;class#MainTest#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>lot</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,7 +128,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="190" />
     <option name="y" value="41" />
     <option name="width" value="1549" />
@@ -125,53 +140,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restAPI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -179,21 +192,21 @@
               <item name="Service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="Marketplace_LOGO" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Marketplace_LOGO" type="462c0819:PsiDirectoryNode" />
+              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -203,6 +216,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,7 +234,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
@@ -240,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest (1)">
+  <component name="RunManager" selected="JUnit.MainTest.addingAuctionUsingJson">
     <configuration name="MainTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
@@ -256,7 +271,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.getSellerDoesNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.addingAuctionUsingJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
         <pattern>
@@ -266,13 +281,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="restAPI" />
       <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
-      <option name="METHOD_NAME" value="getSellerDoesNotExists" />
+      <option name="METHOD_NAME" value="addingAuctionUsingJson" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.showBuyers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.getBidsDoesExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
         <pattern>
@@ -282,13 +297,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="restAPI" />
       <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
-      <option name="METHOD_NAME" value="showBuyers" />
+      <option name="METHOD_NAME" value="getBidsDoesExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.showSellers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.getBidsDoesNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
         <pattern>
@@ -298,13 +313,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="restAPI" />
       <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
-      <option name="METHOD_NAME" value="showSellers" />
+      <option name="METHOD_NAME" value="getBidsDoesNotExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest.getNotBiddenAuction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
         <pattern>
@@ -312,7 +327,10 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="restAPI.Main" />
+      <option name="PACKAGE_NAME" value="restAPI" />
+      <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
+      <option name="METHOD_NAME" value="getNotBiddenAuction" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -326,11 +344,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest.addingAuctionUsingJson" />
+        <item itemvalue="JUnit.MainTest.getNotBiddenAuction" />
+        <item itemvalue="JUnit.MainTest.getBidsDoesNotExists" />
+        <item itemvalue="JUnit.MainTest.getBidsDoesExists" />
         <item itemvalue="JUnit.MainTest (1)" />
-        <item itemvalue="JUnit.MainTest.getSellerDoesNotExists" />
-        <item itemvalue="JUnit.MainTest.showSellers" />
-        <item itemvalue="JUnit.MainTest.showBuyers" />
-        <item itemvalue="Spring Boot.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -348,6 +366,7 @@
       <workItem from="1562136364007" duration="696000" />
       <workItem from="1562142582109" duration="1349000" />
       <workItem from="1562151988431" duration="1738000" />
+      <workItem from="1562153917281" duration="4188000" />
     </task>
     <task id="LOCAL-00001" summary="Specific Getter Service tests added.">
       <created>1562153479836</created>
@@ -356,31 +375,17 @@
       <option name="project" value="LOCAL" />
       <updated>1562153479836</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Other specific getter service tests added.">
+      <created>1562160311572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1562160311572</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainTest_(1) - 2019.07.03 at 11h 30m 32s.xml">
-      <configuration name="MainTest (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_showSellers - 2019.07.03 at 13h 56m 44s.xml">
-      <configuration name="MainTest.showSellers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_(1) - 2019.07.03 at 14h 14m 34s.xml">
-      <configuration name="MainTest (1)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_showBuyers - 2019.07.03 at 14h 20m 04s.xml">
-      <configuration name="MainTest.showBuyers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_showBuyers - 2019.07.03 at 14h 21m 06s.xml">
-      <configuration name="MainTest.showBuyers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_showBuyers - 2019.07.03 at 14h 21m 21s.xml">
-      <configuration name="MainTest.showBuyers" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_showBuyers - 2019.07.03 at 14h 21m 43s.xml">
-      <configuration name="MainTest.showBuyers" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainTest_showSellers - 2019.07.03 at 14h 23m 55s.xml">
       <configuration name="MainTest.showSellers" configurationId="JUnit" />
     </history-entry>
@@ -390,14 +395,36 @@
     <history-entry file="MainTest_getSellerDoesNotExists - 2019.07.03 at 14h 29m 55s.xml">
       <configuration name="MainTest.getSellerDoesNotExists" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainTest_(1) - 2019.07.03 at 14h 42m 09s.xml">
+      <configuration name="MainTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getAuctionDoesExists - 2019.07.03 at 15h 05m 58s.xml">
+      <configuration name="MainTest.getAuctionDoesExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_(1) - 2019.07.03 at 16h 23m 45s.xml">
+      <configuration name="MainTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBidsDoesExists - 2019.07.04 at 09h 07m 20s.xml">
+      <configuration name="MainTest.getBidsDoesExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getBidsDoesNotExists - 2019.07.04 at 09h 08m 54s.xml">
+      <configuration name="MainTest.getBidsDoesNotExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_getNotBiddenAuction - 2019.07.04 at 09h 12m 09s.xml">
+      <configuration name="MainTest.getNotBiddenAuction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_addingAuctionUsingJson - 2019.07.04 at 09h 27m 03s.xml">
+      <configuration name="MainTest.addingAuctionUsingJson" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3874000" />
+    <option name="totallyTimeSpent" value="8062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.26107383" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.21006711" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.25302014" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -438,9 +465,36 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Specific Getter Service tests added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Specific Getter Service tests added." />
+    <MESSAGE value="Other specific getter service tests added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Other specific getter service tests added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -489,14 +543,21 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Service/MarketplaceService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="76" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Auction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="386">
+          <caret line="202" column="67" selection-start-line="202" selection-start-column="67" selection-end-line="202" selection-end-column="67" />
           <folding>
             <element signature="e#1394#1395#0" expanded="true" />
             <element signature="e#1442#1443#0" expanded="true" />
@@ -504,26 +565,25 @@
             <element signature="e#1565#1566#0" expanded="true" />
             <element signature="e#1645#1646#0" expanded="true" />
             <element signature="e#1694#1695#0" expanded="true" />
+            <element signature="e#2650#2651#0" expanded="true" />
+            <element signature="e#2698#2699#0" expanded="true" />
             <element signature="method#getGeneric#0;class#ApiController#0" />
             <element signature="method#showBids#0;class#ApiController#0" />
             <element signature="method#addSeller#0;class#ApiController#0" />
             <element signature="method#addBuyer#0;class#ApiController#0" />
             <element signature="method#addAuction#0;class#ApiController#0" />
             <element signature="method#addLot#0;class#ApiController#0" />
-            <element signature="method#addBid#0;class#ApiController#0" />
             <element signature="method#updateDate#0;class#ApiController#0" />
-            <element signature="method#update#0;class#ApiController#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+        <state relative-caret-position="403">
+          <caret line="315" column="44" selection-start-line="315" selection-start-column="44" selection-end-line="315" selection-end-column="44" />
           <folding>
             <element signature="method#initForTesting#0;class#MainTest#0" />
-            <element signature="method#addLotWithNotExistingSeller#0;class#MainTest#0" />
           </folding>
         </state>
       </provider>
@@ -531,6 +591,29 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
           <splitter-proportions>
@@ -548,6 +631,19 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>marketplace-logo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

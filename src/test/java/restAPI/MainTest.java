@@ -9,16 +9,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
-import restAPI.Model.Auction;
-import restAPI.Model.Buyer;
-import restAPI.Model.Lot;
-import restAPI.Model.Seller;
+import restAPI.Model.*;
+import restAPI.Service.AuctionService;
 import restAPI.Service.LotService;
 import restAPI.Service.MarketplaceService;
 
 import static org.junit.Assert.assertEquals;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -31,6 +28,8 @@ public class MainTest {
     MarketplaceService  MS;
     @Autowired
     LotService          LS;
+    @Autowired
+    AuctionService      AS;
     @Autowired
     private MockMvc     mockMvc;
 
@@ -124,7 +123,50 @@ public class MainTest {
         MS.clearAll();
     }
 
+    @Test
+    public void getBidsDoesExists() throws Exception {
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
 
+        Auction auction = new Auction(seller,lot,"28 July 2019","5.5", "2");
+        MS.addAuction(auction);
+        auction.setID("1111");
+
+        Buyer buyer = new Buyer("Test Buyer");
+        MS.addBuyer(buyer);
+        Bid bid = new Bid(buyer,lot,5.6);
+        AS.addBid(auction, bid);
+
+        this.mockMvc.perform(get("/showBids/1111")).andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void getBidsDoesNotExists() throws Exception {
+        this.mockMvc.perform(get("/showBids/1111")).andDo(print()).andExpect(status().isNotFound());
+        MS.clearAll();
+    }
+
+    @Test
+    public void getNotBiddenAuction() throws Exception {
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        Auction auction = new Auction(seller,lot,"28 July 2019","5.5", "2");
+        MS.addAuction(auction);
+        auction.setID("1111");
+
+        this.mockMvc.perform(get("/showBids/1111")).andDo(print()).andExpect(status().isNotFound());
+        MS.clearAll();
+    }
 
 
     @Test
@@ -157,6 +199,31 @@ public class MainTest {
                     .andDo(print()).andExpect(status().isOk());
         MS.clearAll();
     }
+
+    @Test
+    public void addingAuctionUsingJson () throws Exception {
+        Object randomObj = new Object() {
+            public final String auctionDay = "07 June 2019";
+            public final String price = "3";
+            public final String duration = "2";
+        };
+
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        String json = objectMapper.writeValueAsString(randomObj);
+
+        this.mockMvc.perform(post("/auction/1111/1111")
+                    .contentType(MediaType.APPLICATION_JSON_UTF8_VALUE)
+                    .content(json))
+                    .andDo(print()).andExpect(status().isOk());
+        MS.clearAll();
+    }
+
 
     @Test
     public void addLotWithNegativeWeight () throws Exception {
@@ -222,8 +289,47 @@ public class MainTest {
 
 
 
+    @Test
+    public void updateLotDate () throws Exception {
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        this.mockMvc.perform(put("/updateDate/1111/1111/04 March 2019"))
+                    .andDo(print())
+                    .andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void removeLotExists () throws Exception {
+        Seller seller = new Seller("TestSeller");
+        MS.addSeller(seller);
+        seller.setID("1111");
+        Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
+        LS.addLOT(seller, lot);
+        lot.set_lotID(1111);
+
+        this.mockMvc.perform(delete("/seller/1111/1111"))
+                .andDo(print())
+                .andExpect(status().isOk());
+        MS.clearAll();
+    }
+
+    @Test
+    public void removeLotNotExists () throws Exception {
+
+        this.mockMvc.perform(delete("/seller/1111/1111"))
+                .andDo(print())
+                .andExpect(status().isOk());
+        MS.clearAll();
+    }
 
 
+//
     @Test
     public void addingBuyerUsingObject () {
         Buyer buyerInserted = new Buyer("TestBuyer");

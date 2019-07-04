@@ -200,8 +200,8 @@ public class ApiController {
 
 
     // UPDATE OBJ
-    @RequestMapping(method = RequestMethod.PUT, value = "/updateDate/{sellerID}/{lotID}/{newDate}")
-    private ResponseEntity<?> updateDate(@PathVariable String sellerID, @PathVariable String lotID, @PathVariable String newDate){
+    @RequestMapping(method = RequestMethod.PUT, value = "/updateLotDate/{sellerID}/{lotID}/{newDate}")
+    private ResponseEntity<?> updateLotDate(@PathVariable String sellerID, @PathVariable String lotID, @PathVariable String newDate){
         logger.info("Updating date of Lot {} to {}",lotID,newDate);
         Seller seller = MP.getSeller(sellerID);
         if(seller == null){return  new ResponseEntity<>(
@@ -213,7 +213,7 @@ public class ApiController {
 
     // REMOVE OBJ
     @RequestMapping(method = RequestMethod.DELETE, value = "/seller/{sellerID}/{lotID}")
-    private void update(@PathVariable String lotID, @PathVariable String sellerID){
+    private void deleteLot(@PathVariable String lotID, @PathVariable String sellerID){
         LC.removeLOT(MP.getSeller(sellerID),lotID);
     }
 }
