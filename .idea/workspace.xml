@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e73a7488-0161-4e9f-afb7-2298be2e3720" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restAPI/Model/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restAPI/Model/Auction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/restAPI/Service/AuctionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/restAPI/Service/AuctionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/restAPI/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/restAPI/MainTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -45,11 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Auction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
-              <folding>
-                <element signature="e#1713#1714#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="816">
+              <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -58,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Bid.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -66,20 +60,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
+            <state relative-caret-position="2346">
               <caret line="214" selection-start-line="214" selection-end-line="214" />
               <folding>
                 <element signature="e#1645#1646#0" expanded="true" />
                 <element signature="e#1694#1695#0" expanded="true" />
-                <element signature="e#2650#2651#0" expanded="true" />
-                <element signature="e#2698#2699#0" expanded="true" />
                 <element signature="method#getGeneric#0;class#ApiController#0" />
                 <element signature="method#addSeller#0;class#ApiController#0" />
                 <element signature="method#addBuyer#0;class#ApiController#0" />
                 <element signature="method#addAuction#0;class#ApiController#0" />
                 <element signature="method#addLot#0;class#ApiController#0" />
-                <element signature="method#updateDate#0;class#ApiController#0" />
-                <element signature="method#update#0;class#ApiController#0" />
               </folding>
             </state>
           </provider>
@@ -88,8 +78,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Service/AuctionService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
+            <state relative-caret-position="306">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Buyer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <folding>
+                <element signature="e#292#293#0" expanded="true" />
+                <element signature="e#334#335#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -97,8 +100,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="391" column="50" selection-start-line="391" selection-start-column="50" selection-end-line="391" selection-end-column="50" />
+            <state relative-caret-position="410">
+              <caret line="325" column="46" selection-start-line="325" selection-start-column="46" selection-end-line="325" selection-end-column="46" />
               <folding>
                 <element signature="method#initForTesting#0;class#MainTest#0" />
               </folding>
@@ -111,6 +114,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>lot</find>
+      <find>remove</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,9 +151,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="190" />
-    <option name="y" value="41" />
-    <option name="width" value="1549" />
-    <option name="height" value="944" />
+    <option name="y" value="40" />
+    <option name="width" value="1550" />
+    <option name="height" value="945" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -157,6 +161,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,24 +199,6 @@
               <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
               <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restAPI" type="462c0819:PsiDirectoryNode" />
-              <item name="Service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="marketplace-logo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="marketplace-logo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -234,7 +221,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,7 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MainTest.addMultipleBidsOverAuctionPrice">
+  <component name="RunManager" selected="JUnit.MainTest">
     <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
@@ -306,22 +292,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest.addBidOverAuctionPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="marketplace-logo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="restAPI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="restAPI" />
-      <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
-      <option name="METHOD_NAME" value="addBidOverAuctionPrice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MainTest.addMultipleBidsOverAuctionPrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="marketplace-logo" />
       <extension name="coverage">
@@ -333,6 +303,22 @@
       <option name="PACKAGE_NAME" value="restAPI" />
       <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
       <option name="METHOD_NAME" value="addMultipleBidsOverAuctionPrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainTest.addingBuyerUsingObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="marketplace-logo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="restAPI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="restAPI" />
+      <option name="MAIN_CLASS_NAME" value="restAPI.MainTest" />
+      <option name="METHOD_NAME" value="addingBuyerUsingObject" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -360,11 +346,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainTest" />
+        <item itemvalue="Spring Boot.Main (1)" />
+        <item itemvalue="JUnit.MainTest.addingBuyerUsingObject" />
         <item itemvalue="JUnit.MainTest.addMultipleBidsOverAuctionPrice" />
         <item itemvalue="JUnit.MainTest.addBidLowerAuctionPrice" />
-        <item itemvalue="Spring Boot.Main (1)" />
-        <item itemvalue="JUnit.MainTest" />
-        <item itemvalue="JUnit.MainTest.addBidOverAuctionPrice" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +368,9 @@
       <workItem from="1562136364007" duration="696000" />
       <workItem from="1562142582109" duration="1349000" />
       <workItem from="1562151988431" duration="1738000" />
-      <workItem from="1562153917281" duration="11478000" />
+      <workItem from="1562153917281" duration="15153000" />
+      <workItem from="1562257254363" duration="1764000" />
+      <workItem from="1562419539412" duration="100000" />
     </task>
     <task id="LOCAL-00001" summary="Specific Getter Service tests added.">
       <created>1562153479836</created>
@@ -426,49 +414,63 @@
       <option name="project" value="LOCAL" />
       <updated>1562223865473</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Winner bid feature added with needed methods and services. Also included the test cases.">
+      <created>1562240843561</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1562240843561</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed problems of test by cleaning memory held.">
+      <created>1562242734282</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1562242734282</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainTest_addBidLowerAuctionPrice - 2019.07.04 at 14h 05m 07s.xml">
-      <configuration name="MainTest.addBidLowerAuctionPrice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_addBidLowerAuctionPrice - 2019.07.04 at 14h 05m 45s.xml">
-      <configuration name="MainTest.addBidLowerAuctionPrice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_addBidLowerAuctionPrice - 2019.07.04 at 14h 30m 53s.xml">
-      <configuration name="MainTest.addBidLowerAuctionPrice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_addBidLowerAuctionPrice - 2019.07.04 at 14h 31m 27s.xml">
-      <configuration name="MainTest.addBidLowerAuctionPrice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_addBidLowerAuctionPrice - 2019.07.04 at 14h 32m 17s.xml">
-      <configuration name="MainTest.addBidLowerAuctionPrice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_addMultipleBidsOverAuctionPrice - 2019.07.04 at 14h 34m 56s.xml">
-      <configuration name="MainTest.addMultipleBidsOverAuctionPrice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_addMultipleBidsOverAuctionPrice - 2019.07.04 at 14h 36m 12s.xml">
-      <configuration name="MainTest.addMultipleBidsOverAuctionPrice" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainTest_addMultipleBidsOverAuctionPrice - 2019.07.04 at 14h 37m 27s.xml">
-      <configuration name="MainTest.addMultipleBidsOverAuctionPrice" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainTest_addMultipleBidsOverAuctionPrice - 2019.07.04 at 14h 39m 16s.xml">
       <configuration name="MainTest.addMultipleBidsOverAuctionPrice" configurationId="JUnit" />
     </history-entry>
     <history-entry file="MainTest_addMultipleBidsOverAuctionPrice - 2019.07.04 at 14h 45m 01s.xml">
       <configuration name="MainTest.addMultipleBidsOverAuctionPrice" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainTest_addMultipleBidsOverAuctionPrice - 2019.07.04 at 14h 45m 48s.xml">
+      <configuration name="MainTest.addMultipleBidsOverAuctionPrice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2019.07.04 at 14h 59m 08s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2019.07.04 at 14h 59m 55s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest_addingBuyerUsingObject - 2019.07.04 at 15h 02m 35s.xml">
+      <configuration name="MainTest.addingBuyerUsingObject" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2019.07.04 at 15h 04m 45s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2019.07.04 at 15h 05m 07s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2019.07.04 at 16h 22m 55s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainTest - 2019.07.04 at 19h 21m 47s.xml">
+      <configuration name="MainTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15352000" />
+    <option name="totallyTimeSpent" value="20891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.21006711" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.18456376" />
       <window_info id="Structure" order="1" sideWeight="0.50141644" side_tool="true" weight="0.25302014" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -479,7 +481,7 @@
       <window_info id="Web" order="8" sideWeight="0.50141644" side_tool="true" weight="0.25302014" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.37677053" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.38243628" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -534,6 +536,20 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Specific Getter Service tests added." />
@@ -542,67 +558,9 @@
     <MESSAGE value="UrlTemplate for updateLotDate method is changed." />
     <MESSAGE value="Some methods changed for Remove Test and status fixed." />
     <MESSAGE value="Comment added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Comment added." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Service/AuctionService.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Model/Auction.java</url>
-          <line>51</line>
-          <properties />
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Model/Auction.java</url>
-          <line>54</line>
-          <properties />
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java</url>
-          <line>419</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java</url>
-          <line>214</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/restAPI/Service/AuctionService.java</url>
-          <line>21</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java</url>
-          <line>382</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java</url>
-          <line>392</line>
-          <properties />
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Winner bid feature added with needed methods and services. Also included the test cases." />
+    <MESSAGE value="Fixed problems of test by cleaning memory held." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed problems of test by cleaning memory held." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Service/LotService.java">
@@ -612,10 +570,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Bid.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <caret line="11" column="171" selection-start-line="11" selection-start-column="171" selection-end-line="11" selection-end-column="171" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -633,54 +598,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_211/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="171" selection-start-line="11" selection-start-column="171" selection-end-line="11" selection-end-column="171" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Service/AuctionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Auction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#1713#1714#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="816">
+          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Bid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Controller/ApiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
+        <state relative-caret-position="2346">
           <caret line="214" selection-start-line="214" selection-end-line="214" />
           <folding>
             <element signature="e#1645#1646#0" expanded="true" />
             <element signature="e#1694#1695#0" expanded="true" />
-            <element signature="e#2650#2651#0" expanded="true" />
-            <element signature="e#2698#2699#0" expanded="true" />
             <element signature="method#getGeneric#0;class#ApiController#0" />
             <element signature="method#addSeller#0;class#ApiController#0" />
             <element signature="method#addBuyer#0;class#ApiController#0" />
             <element signature="method#addAuction#0;class#ApiController#0" />
             <element signature="method#addLot#0;class#ApiController#0" />
-            <element signature="method#updateDate#0;class#ApiController#0" />
-            <element signature="method#update#0;class#ApiController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Service/AuctionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/restAPI/Model/Buyer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#292#293#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/restAPI/MainTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="391" column="50" selection-start-line="391" selection-start-column="50" selection-end-line="391" selection-end-column="50" />
+        <state relative-caret-position="410">
+          <caret line="325" column="46" selection-start-line="325" selection-start-column="46" selection-end-line="325" selection-end-column="46" />
           <folding>
             <element signature="method#initForTesting#0;class#MainTest#0" />
           </folding>
