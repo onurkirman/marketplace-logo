@@ -323,7 +323,7 @@ public class MainTest {
         MS.clearAll();
         this.mockMvc.perform(delete("/seller/1111/1111"))
                     .andDo(print())
-                    .andExpect(status().isOk());
+                    .andExpect(status().isNotFound());
     }
 
     @Test
