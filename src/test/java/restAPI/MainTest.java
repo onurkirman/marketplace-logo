@@ -327,7 +327,7 @@ public class MainTest {
     }
 
     @Test
-    public void addBidOverAuctionPrice() throws Exception {
+    public void addBidOverAuctionPrice() throws Exception
         MS.clearAll();
         Object randomObj = new Object() {
             public final double price = 5.6;
