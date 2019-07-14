@@ -102,7 +102,7 @@ public class MainTest {
     @Test
     public void getAuctionDoesExists() throws Exception {
         MS.clearAll();
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -125,7 +125,7 @@ public class MainTest {
     @Test
     public void getBidsDoesExists() throws Exception {
         MS.clearAll();
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -153,7 +153,7 @@ public class MainTest {
     @Test
     public void getNotBiddenAuction() throws Exception {
         MS.clearAll();
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -208,7 +208,7 @@ public class MainTest {
             public final String duration = "2";
         };
 
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -227,7 +227,7 @@ public class MainTest {
     @Test
     public void addLotWithNegativeWeight () throws Exception {
         MS.clearAll();
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
 
@@ -249,7 +249,7 @@ public class MainTest {
     @Test
     public void addLotWithNotSufficientWeight () throws Exception {
         MS.clearAll();
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
 
@@ -291,7 +291,7 @@ public class MainTest {
     @Test
     public void updateLotDate () throws Exception {
         MS.clearAll();
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -306,7 +306,7 @@ public class MainTest {
     @Test
     public void removeLotExists () throws Exception {
         MS.clearAll();
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -333,7 +333,7 @@ public class MainTest {
             public final double price = 5.6;
         };
 
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -364,7 +364,7 @@ public class MainTest {
             public final double price = 5.8;
         };
 
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -400,7 +400,7 @@ public class MainTest {
             public final double price = 4.6;
         };
 
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -449,7 +449,7 @@ public class MainTest {
             public final double price = 5.6;
         };
 
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
@@ -484,7 +484,7 @@ public class MainTest {
     @Test
     public void addingSellerUsingObject () {
         MS.clearAll();
-        Seller sellerInserted = new Seller("TestBuyer");
+        Seller sellerInserted = new Seller("Test Seller");
         MS.addSeller(sellerInserted);
         sellerInserted.setID("1111");
         Seller sellerGathered = MS.getSeller("1111");
@@ -494,7 +494,7 @@ public class MainTest {
     @Test
     public void addingAuctionUsingObject () {
         MS.clearAll();
-        Seller seller = new Seller("TestSeller");
+        Seller seller = new Seller("Test Seller");
         MS.addSeller(seller);
         seller.setID("1111");
         Lot lot = new Lot("Test Banana", "Turkey", "12 June 2019", "1000");
